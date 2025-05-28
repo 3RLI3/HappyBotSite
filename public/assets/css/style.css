@@ -1,0 +1,259 @@
+/* assets/css/style.css */
+
+/* 1. Color & Layout Variables */
+:root {
+  --container-max: 1200px;        /* Max width for main content */
+  --color-bg: #FEF9E7;            /* Warm cream background */
+  --color-primary: #A2D5F2;       /* Soft sky blue */
+  --color-accent: #FF6F61;        /* Cheerful coral */
+  --color-text: #333333;          /* Dark charcoal */
+  --color-card-bg: #FFFFFF;       /* Crisp white */
+  --color-muted: #777777;         /* Muted gray */
+}
+
+/* 2. Reset & Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  font-family: 'Open Sans', sans-serif;
+  line-height: 1.6;
+}
+
+/* 3. Utility Classes */
+.container {
+  max-width: var(--container-max);
+  margin: 0 auto;
+  padding-top: 0.5rem;   
+  padding-bottom: 0.5rem;
+}
+
+.btn {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  background-color: var(--color-accent);
+  color: #fff;
+  text-decoration: none;
+  border-radius: 4px;
+  font-weight: bold;
+  transition: opacity 0.2s ease;
+}
+.btn:hover {
+  opacity: 0.85;
+}
+
+/* 4. Back-to-Top Button */
+.back-to-top {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  background-color: var(--color-accent);
+  color: #fff;
+  width: 3rem;
+  height: 3rem;
+  line-height: 3rem;
+  text-align: center;
+  border-radius: 50%;
+  text-decoration: none;
+  font-size: 1.5rem;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+  z-index: 100;
+}
+.back-to-top.show {
+  opacity: 0.8;
+  visibility: visible;
+}
+.back-to-top:hover {
+  opacity: 1;
+}
+
+/* 5. Reveal Animations */
+.hidden-on-scroll {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* assets/css/style.css */
+
+/* —— FEATURES GRID —— */
+.features-grid {
+  display: grid;
+  gap: 1.5rem;
+  /* by default, one column on mobile */
+  grid-template-columns: 1fr;
+  margin-bottom: 1rem;
+}
+
+/* tablet: two columns */
+@media (min-width: 600px) {
+  .features-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* desktop: four columns */
+@media (min-width: 1024px) {
+  .features-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+/* 6. Hero Section */
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2rem 1rem;
+  background-color: var(--color-card-bg);
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  margin-bottom: 1rem;
+}
+.hero .hero-text {
+  max-width: 55%;
+}
+.hero h1 {
+  font-size: 3rem;
+  color: var(--color-primary);
+  margin-bottom: 1rem;
+}
+.hero p {
+  font-size: 1.125rem;
+  margin-bottom: 1.5rem;
+  color: var(--color-muted);
+}
+.hero img {
+  max-width: 40%;
+  border-radius: 8px;
+}
+
+/* 7. Features Grid */
+.features {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+.feature-card {
+  background-color: var(--color-card-bg);
+  border-radius: 4px;
+  padding: 1rem;
+  text-align: center;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05);
+}
+.feature-card img,
+.feature-card svg {
+  width: 48px;
+  height: 48px;
+  margin-bottom: 1rem;
+}
+.feature-card h3 {
+  font-size: 1.25rem;
+  color: var(--color-primary);
+  margin-bottom: 0.5rem;
+}
+.feature-card p {
+  color: var(--color-muted);
+  font-size: 0.95rem;
+}
+
+/* Ensure exactly 4 columns at wide breakpoints */
+@media (min-width: 1024px) {
+  .features {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+/* 8. How-To Section */
+.how-to {
+  background-color: var(--color-card-bg);
+  border-radius: 4px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05);
+  margin-top: 1.5rem;    /* default was around 2rem+; drop it down */
+  margin-bottom: 1rem;
+  padding-top: 1rem;     /* optional: add a little padding inside */
+  padding-bottom: 1rem;
+}
+.how-to h2 {
+  font-size: 1.75rem;
+  color: var(--color-primary);
+  margin-bottom: 1rem;
+}
+.how-to ol {
+  list-style: decimal inside;
+}
+.how-to li {
+  margin-bottom: 0.75rem;
+  font-size: 1rem;
+}
+
+/* 9. FAQ Section */
+.faq {
+  background-color: var(--color-card-bg);
+  border-radius: 4px;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.05);
+  margin-top: 1rem;    /* default was around 2rem+; drop it down */
+  margin-bottom: 1rem;
+  padding-top: 0rem;     /* optional: add a little padding inside */
+  padding-bottom: 0rem;
+}
+.faq h2 {
+  font-size: 1.75rem;
+  color: var(--color-primary);
+  margin-bottom: 1rem;
+}
+.faq dt {
+  font-weight: bold;
+  margin-top: 1rem;
+}
+.faq dd {
+  margin-left: 4rem;
+  color: var(--color-muted);
+}
+
+/* 10. Footer */
+footer {
+  text-align: center;
+  padding: 1.5rem 1rem;
+  color: var(--color-muted);
+  font-size: 0.875rem;
+}
+footer a {
+  color: var(--color-primary);
+  text-decoration: none;
+}
+footer a:hover {
+  text-decoration: underline;
+}
+
+/* 11. Responsive Tweaks */
+@media (max-width: 768px) {
+  .hero {
+    flex-direction: column-reverse;
+    text-align: center;
+  }
+  .hero .hero-text,
+  .hero img {
+    max-width: 100%;
+  }
+  .hero img {
+    margin-bottom: 2rem;
+  }
+}

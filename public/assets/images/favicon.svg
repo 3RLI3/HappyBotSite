@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 100">
+  <rect width="200" height="100" fill="#FEF9E7"></rect>
+  <circle cx="100" cy="50" r="40" fill="#A2D5F2"></circle>
+  <text x="100" y="55" font-size="20" text-anchor="middle" fill="#fff">HappyBot</text>
+</svg>
