@@ -46,41 +46,32 @@ live-server
 ```
 
 ☁️ Deploying to Render
-Create a new Static Site on Render.
+- Create a new Static Site on Render.
 
-Connect your GitHub/GitLab repo and select the public/ folder as the Publish Directory.
+- Connect your GitHub/GitLab repo and select the public/ folder as the Publish Directory.
 
-Build Command: leave blank (no build step required).
+- Build Command: leave blank (no build step required).
 
-Publish Directory: public
+- Publish Directory: public
 
-Root Directory: (default)
+- Root Directory: (default)
 
 Advanced Settings:
 
-Branch: main (or your default branch)
+- Branch: main (or your default branch)
 
-Environment: (none required)
+- Environment: (none required)
 
-Deploy. Render will serve public/index.html and static assets at your custom or onrender.com domain.
+- Deploy. Render will serve public/index.html and static assets at your custom or onrender.com domain.
 
 🎨 Customization
-Update Text: Edit public/index.html.
+- Update Text: Edit public/index.html.
 
-Change Styles: Modify assets/css/style.css.
+- Change Styles: Modify assets/css/style.css.
 
-Swap Icons/Images: Replace files in assets/images/.
+- Swap Icons/Images: Replace files in assets/images/.
 
-Adjust Animations: Tweak assets/js/main.js or CSS transition settings.
-
-🤝 Contributing
-Fork the repo
-
-Create a feature branch (git checkout -b feature/...)
-
-Commit your changes (git commit -m "Add ...").
-
-Push to your branch and open a Pull Request
+- Adjust Animations: Tweak assets/js/main.js or CSS transition settings.
 
 📜 License
 HappyBot static site is released under the MIT License.
