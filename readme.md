@@ -1,4 +1,4 @@
-# HappyBot Static Landing Site
+# HappyBot Landing Site
 
 A simple, engaging, and responsive static website for **HappyBot**—your friendly Singaporean companion on Telegram. This site introduces new users to HappyBot’s features, offers quick-start guidance, and provides FAQs and tips for existing users.
 
