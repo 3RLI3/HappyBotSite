@@ -18,26 +18,8 @@ A simple, engaging, and responsive static website for **HappyBot**—your friend
 ---
 
 ## 📁 File Structure
-├── public/
-│ ├── index.html ← Main landing page
-│ ├── robots.txt ← Search-engine directives
-│ └── favicon.ico ← Browser tab icon
-│
-├── assets/
-│ ├── css/
-│ │ └── style.css ← Site styles
-│ ├── js/
-│ │ └── main.js ← Smooth scrolling & reveal animations
-│ └── images/
-│ ├── HappySingaporeBot.png ← Hero illustration
-│ ├── empathy-icon.svg
-│ ├── voice-icon.svg
-│ ├── poll-icon.svg
-│ ├── local-icon.svg
-│ ├── setup-icon.svg
-│ └── favicon.ico
-│
-└── README.md ← This file
+
+![image](https://github.com/user-attachments/assets/a988ea05-1d96-4f7b-8991-09eb86f5b9a5)
 
 
 ---
