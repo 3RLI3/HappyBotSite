@@ -21,7 +21,6 @@ A simple, engaging, and responsive static website for **HappyBot**—your friend
 
 ![image](https://github.com/user-attachments/assets/a988ea05-1d96-4f7b-8991-09eb86f5b9a5)
 
-
 ---
 
 ## 💻 Local Preview
