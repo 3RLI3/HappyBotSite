@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>HappyBot_Learning_Reflection</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      border: none;
+      border-top: 1px solid #1a1a1a;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+</head>
+<body>
+<h1
+id="learning-reflection-building-a-generative-ai-powered-telegram-miniapp">🧠
+Learning Reflection: Building a Generative AI-Powered Telegram
+MiniApp</h1>
+<h2 id="overview">Overview</h2>
+<p>This project demonstrates the integration of Generative AI into a
+real-world chatbot deployed on Telegram, enhanced by multimodal input
+(text + voice), Web App interactivity, and deployment on Render. The
+application—<em>HappyBot</em>—is designed for wellbeing support and
+interaction through both natural conversation and a Telegram Mini App
+interface.</p>
+<hr />
+<h2 id="real-world-relevance">🎯 Real-World Relevance</h2>
+<p>Building this application provided a comprehensive look into applying
+<strong>Generative AI</strong> for practical problems like: - Mental
+wellbeing support through empathetic responses - Lightweight
+mobile-friendly interaction (Mini App) - Async API deployments and
+webhook-based triggers - Multimodal UX with both text and voice
+support</p>
+<hr />
+<h2 id="key-learning-components">🧩 Key Learning Components</h2>
+<h3 id="langchain-integration">1. 🦜🔗 <strong>LangChain
+Integration</strong></h3>
+<ul>
+<li><strong>Prompt Engineering</strong>: The project uses
+<code>format_prompt()</code> via LangChain to condition prompts by
+context (<code>detect_context()</code>), history, and user intent.</li>
+<li><strong>Modularity</strong>: LangChain enables abstraction of prompt
+templates and chaining future capabilities (e.g., document Q&amp;A,
+memory, tools).</li>
+</ul>
+<h3 id="use-of-llms-sea-lion-api">2. 🤖 <strong>Use of LLMs (Sea-Lion
+API)</strong></h3>
+<ul>
+<li>The bot uses SEA-LION v3 9B model hosted by AISG via REST API.</li>
+<li>Handled <strong>multi-turn memory</strong> by appending conversation
+history per user (cached or Redis).</li>
+<li>Demonstrated grounding LLMs with situational context (e.g., crisis
+response).</li>
+</ul>
+<h3 id="render-hosting-webhook-deployment">3. ☁️ <strong>Render Hosting
+&amp; Webhook Deployment</strong></h3>
+<ul>
+<li>Application is deployed to <a href="https://render.com">Render</a>,
+a free-tier cloud host.</li>
+<li>Uses <code>run_webhook()</code> to expose a Telegram-compatible
+endpoint.</li>
+<li>Keeps uptime high with external monitoring (e.g., UptimeRobot).</li>
+</ul>
+<h3 id="telegram-mini-app-integration">4. 📱 <strong>Telegram Mini App
+Integration</strong></h3>
+<ul>
+<li>Sends a button via <code>InlineKeyboardMarkup</code> to open a Web
+App.</li>
+<li>Users can submit data via embedded HTML forms
+(<code>alerts.html</code>) back into Telegram via
+<code>web_app_data</code>.</li>
+<li>Provides a more visual UI compared to plain text.</li>
+</ul>
+<h3 id="multimodal-interaction-voice-text">5. 🗣️ <strong>Multimodal
+Interaction (Voice + Text)</strong></h3>
+<ul>
+<li>Accepts Telegram voice notes (<code>.oga</code>), converts to
+<code>.wav</code>, and transcribes using
+<code>SpeechRecognition + Sphinx</code>.</li>
+<li>Responds back in <strong>text</strong> and <strong>TTS
+audio</strong> using <code>gTTS</code>, improving accessibility and
+engagement.</li>
+</ul>
+<hr />
+<h2 id="system-design-highlights">🔧 System Design Highlights</h2>
+<ul>
+<li><code>telegram_bot.py</code>: Handles all Telegram logic, command
+routing, and multimodal message processing.</li>
+<li><code>sea_lion_api.py</code>: Centralizes LLM interaction, allows
+easy swapping of providers.</li>
+<li><code>session_db.py</code>: Supports Redis-based or in-memory
+session state management.</li>
+<li><code>langchain_prompts.py</code>: Modular prompt formatting
+logic.</li>
+</ul>
+<hr />
+<h2 id="learning-takeaways">📈 Learning Takeaways</h2>
+<table>
+<colgroup>
+<col style="width: 64%" />
+<col style="width: 35%" />
+</colgroup>
+<thead>
+<tr>
+<th>Concept</th>
+<th>Key Insight</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Prompt Design</td>
+<td>How small changes affect model tone &amp; relevance</td>
+</tr>
+<tr>
+<td>API Rate-Limits</td>
+<td>Added retries, error logging for robustness</td>
+</tr>
+<tr>
+<td>Web App UX</td>
+<td>JavaScript-based forms bridge mobile &amp; bot</td>
+</tr>
+<tr>
+<td>Multimodal Handling</td>
+<td>Complex pipeline: OGG → WAV → Text → LLM → Text+TTS</td>
+</tr>
+<tr>
+<td>Deployment Strategy</td>
+<td>Importance of environment variables &amp; webhook correctness</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="conclusion">🔚 Conclusion</h2>
+<p>This project embodies a <strong>full-stack AI agent</strong>, from
+frontend interaction (Mini App) to backend intelligence (LLM) with
+seamless cloud deployment and real-time interaction via Telegram. It
+highlights how modern GenAI tools can be adapted creatively to real
+societal challenges, such as mental wellbeing support, through
+thoughtful system design.</p>
+</body>
+</html>
