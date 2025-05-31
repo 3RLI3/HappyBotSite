@@ -194,7 +194,7 @@ body {
 .how-to h2 {
   font-size: 1.75rem;
   color: var(--color-primary);
-  margin-bottom: 10rem;
+  margin-bottom: 1rem;
 }
 .how-to ol {
   list-style: decimal inside;
